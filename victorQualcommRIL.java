@@ -301,7 +301,7 @@ public class victorQualcommRIL extends RIL implements CommandsInterface {
                     + " aid: " + mAid + " facility: " + facility);
 
         if (facility.equals("SC") &&
-               SystemProperties.get("ro.cm.device").indexOf("e73") == 0) {
+               SystemProperties.get("ro.aokp.device").indexOf("e73") == 0) {
             int [] iccstatus = new int[1];
             iccstatus[0] = mPinState;
             AsyncResult.forMessage(response, iccstatus, null);
